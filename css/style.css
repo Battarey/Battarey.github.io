@@ -1,0 +1,297 @@
+:root {
+    /* colors */
+    --bg_color: rgb(38, 36, 37);
+    --bg_two_color: rgb(246, 163, 10);
+    --bl_color: black;
+    --wh_color: rgb(255, 255, 255);
+    --yl_color: rgb(185, 185, 0);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-menu {
+    display: flex;
+}
+
+body {
+    background-color: var(--bg_color);
+}
+
+.link,
+.phone {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--wh_color);
+    list-style: none;
+    text-align: center;
+}
+
+a:hover {
+    color: var(--bg_two_color);
+    transition: all 0.5s ease-in-out;
+}
+
+.link:hover {
+    background-color: var(--bl_color);
+    transition: all 0.5s ease-in-out;
+}
+
+.phone:hover {
+    background-color: var(--bl_color);
+    color: var(--bg_two_color);
+    transition: all 0.3s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    padding: 90px 0;
+    font-size: 100px;
+    color: var(--bg_two_color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+    color: var(--wh_color);
+    text-decoration: none;
+    text-align: center;
+}
+
+.icons {
+    list-style: none;
+}
+
+.header-row {
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    padding: 10px 10px 0px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 30px;
+}
+
+.contact-info {
+    text-align: center;
+    background-color: var(--bg_two_color);
+    margin: auto auto;
+    padding: 30px 30px 25px;
+    border-radius: 10px;
+    max-width: 400px;
+}
+
+input {
+    width: 100%;
+    text-align: center;
+    padding: 7px;
+    margin-bottom: 10px;
+    background-color: azure;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+    border-color: black;
+}
+
+
+.about {
+    display: flex;
+    gap: 30px;
+    color: var(--wh_color);
+}
+
+.about-list {
+    list-style: none;
+}
+
+button {
+    background-color: var(--bl_color);
+    color: var(--wh_color);
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+button:hover {
+    color: var(--bg_two_color);
+}
+
+.check-mark,
+.string {
+    color: var(--bg_two_color);
+}
+
+h3 {
+    text-align: center;
+    color: var(--bg_two_color);
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+td,
+th {
+    border: 2px solid var(--wh_color);
+    padding: 10px;
+}
+
+.portfolio-info {
+    color: var(--wh_color);
+}
+
+table {
+    border-collapse: collapse;
+    color: var(--wh_color);
+    font-size: 20px;
+    background-color: var(--bg_two_color);
+    margin: auto auto 30px;
+    padding: 20px 10px;
+}
+
+.table-price {
+    background-color: rgb(0, 0, 0);
+}
+
+.price-table {
+    text-align: center;
+}
+
+.footer-row {
+    display: flex;
+    color: var(--wh_color);
+    bottom: 0;
+    width: 100%;
+    height: 52px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 {
+    color: var(--wh_color);
+    padding: 0 0 10px;
+}
+
+tr:hover {
+    background-color: var(--yl_color);
+}
+
+tr:first-child {
+    background-color: var(--bl_color);
+}
+
+main {
+    min-height: calc(100vh - 152px);
+    position: relative;
+    padding-top: 50px;
+}
+
+.icons a:hover svg {
+    fill: aqua;
+}
+
+main.home-page {
+    min-height: calc(100vh - 107px);
+}
+
+.menu-btn {
+    display: none;
+    color: var(--wh_color);
+}
+
+.cartoons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartoons li:nth-child(2) a {
+    height: 190px;
+}
+
+.cartoons li:nth-child(4) a {
+    height: 160px;
+}
+
+ul.cartoons li {
+    width: 23%;
+} 
+
+ul.cartoons li a {
+    display: block;
+    height: 140px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+@media screen and (min-width: 768px) {
+    .menu-btn {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    div {
+        padding: 10px;
+    }
+
+    nav {
+        width: 0%;
+        overflow: hidden;
+        position: absolute;
+        z-index: 4;
+        top: 0;
+        right: -400px;
+        background: var(--bg_two_color);
+        height: 100vh;
+        transition: all 0.3s;
+    }
+
+    nav.open {
+        right: 0;
+        width: 100%;
+    }
+
+    .main-menu {
+        flex-direction: column;
+    }
+
+
+    .menu-btn {
+        display: block;
+        font-size: 30px;
+        position: relative;
+        z-index: 5;
+        cursor: pointer;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+    }
+
+
+    .footer-row {
+        font-size: 15px;
+    }
+
+
+    main.home-page {
+        min-height: calc(100vh - 147px);
+    }
+}
